@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "submit") { // this refers to teh button just clicked, if it is equil to submit alert you clicked submit //
+                alert("You clicked Submit!");
+            } else {
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`); // you clicked (then game type ie division, addition, etc)//
+            }
+        })
+    }
+})
+
 function runGame() {
 
 }
@@ -31,5 +46,5 @@ function displayMultiplyQuestion() {
 }
 
 function displayDivisionQuestion() {
-    
+
 }
